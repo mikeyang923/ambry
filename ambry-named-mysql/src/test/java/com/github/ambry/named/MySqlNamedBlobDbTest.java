@@ -83,6 +83,8 @@ public class MySqlNamedBlobDbTest {
           .put("username", "test")
           .put("password", "password"));
     }
+
+
     properties.setProperty(MySqlNamedBlobDbConfig.DB_INFO, dbInfo.toString());
     namedBlobDb = new MySqlNamedBlobDb(accountService, new MySqlNamedBlobDbConfig(new VerifiableProperties(properties)),
         dataSourceFactory, localDatacenter, new MetricRegistry());
